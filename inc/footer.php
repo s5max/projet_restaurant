@@ -3,3 +3,6 @@
 	//div en couleur
 
 ?>
+
+</body
+</html>
