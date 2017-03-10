@@ -179,6 +179,8 @@ require_once '../../inc/header.php';
 		<p style="color:green;"><?php echo $success; ?></p>
 	<?php endif; ?>
 
+<!--
+	-->
 
 	<?php if($displayForm === true): ?>
 	<form method="post" enctype="multipart/form-data">
