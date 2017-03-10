@@ -2,7 +2,7 @@
 
 	//inclure le header
 
-	//Demande de confirmation
+	//Gérer les recettes
 
 	//inclure le footer
 

@@ -2,7 +2,7 @@
 
 	//inclure le header
 
-	//Demande de confirmation
+	//Formulaire d'ajout de rectte
 
 	//inclure le footer
 

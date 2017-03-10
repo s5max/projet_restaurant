@@ -2,7 +2,7 @@
 
 	//inclure le header
 
-	//Demande de confirmation
+	//Marquer les messages comme étant lu ou non
 
 	//inclure le footer
 
