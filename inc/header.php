@@ -3,8 +3,9 @@
 	//Requete sql from options
 
 	$select = $bdd->prepare('SELECT * FROM options');
-	$options = $select->fetchAll(PDO::FETCH_ASSSOC); 
-
+   if($select->execute()){
+	$options = $select->fetchAll(PDO::FETCH_ASSOC); 
+   }
 ?><!DOCTYPE html>
 <html lang='fr'>
 
