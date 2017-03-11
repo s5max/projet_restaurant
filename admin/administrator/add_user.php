@@ -8,7 +8,7 @@
 
 	//inclure le footer
 
-require_once 'inc/connect.php';
+require_once '../../inc/connect.php';
 
 $errors = [];
 $post = []; // Contiendra les données épurées <3 <3
@@ -67,7 +67,7 @@ if(!empty($_POST)){
 }
 ?>
 <?php
-require_once 'inc/header.php';
+require_once '../../inc/header.php';
 ?>
 
 <?php
@@ -104,5 +104,5 @@ require_once 'inc/header.php';
 	
 
 <?php
-require_once 'inc/footer.php';
+require_once '../../inc/footer.php';
 ?>

@@ -47,7 +47,7 @@ if(!empty($_POST)){
 		$insert = $bdd->prepare('INSERT INTO users (firstname, lastname, email, subject) VALUES (:firstname, :lastname, :email, :subject)');
 		$insert->bindValue(':firstname', $post['firstname']);
 		$insert->bindValue(':lastname', $post['lastname']);
-		$insert->bindValue(':email', $post['email']));
+		$insert->bindValue(':email', $post['email']);
 		$insert->bindValue(':subject', $post['subject']);
 
 		if($insert->execute()){
