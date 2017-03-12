@@ -46,7 +46,7 @@ $maxSize = (1024 * 1000) * 2;
 
 // Répertoire d'upload - ou seront téléchargés les photos
 
-$uploadDir = '../../uploads/';
+$uploadDir = 'uploads/';
 
 //Type d'images acceptées en téléchargement
 $mimeTypeAvailable = ['image/jpg', 'image/jpeg', 'image/pjpeg', 'image/png', 'image/gif'];
@@ -135,11 +135,11 @@ if(!empty($_POST)){
 
 		
 		//préparation de l'affichage de la date et de l'heure
-		$dateAndTime = date(Y/m/d h/i/s);
+		$dateAndTime = date('Y/m/d h:i:s');
 		
 		
 //pour réccupérer l'id de l'user -- penser à décommenter
-//		$addRecipe->bindValue(':dataUserId', $_SESSION['me']['id'] , PDO::PARAM_INT); 
+		$addRecipe->bindValue(':dataUserId', $_SESSION['userId'] , PDO::PARAM_INT); 
 		$addRecipe->bindValue(':dataTitle', $post['title']); 
 		$addRecipe->bindValue(':dataContent', $post['content']);
 		$addRecipe->bindValue(':dataPicture', $uploadDir.$newPictureName);
@@ -195,19 +195,7 @@ require_once '../../inc/header.php';
 		<label for="picture">Photo</label>
 		<input type="file" name="picture" id="picture" accept="image/*">
 
-		<br>
-		<label for="note">Note</label>
-		<select name="note" id="note">
-			<option value="">-- Sélectionnez --</option>
-			<?php for($i=0;$i<=10;$i++): ?>
-				<option value="<?php echo $i;?>"><?php echo $i;?> / 10</option>
-			<?php endfor; ?>
-		</select>
-
-		<br>
-		<label for="selected">Sélection du chef ?</label>
-		<input type="checkbox" name="selected" id="selected"> Oui
-
+		
 
 		<br>
 		<input type="submit" value="Envoyer ma recette">
@@ -215,10 +203,11 @@ require_once '../../inc/header.php';
 	<?php endif; ?>
 
 
-</body>
-</html>
 
 
+<?php
+
+require_once '../../inc/footer.php';
 	//inclure le header
 
 

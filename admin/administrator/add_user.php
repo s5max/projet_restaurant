@@ -22,11 +22,11 @@ if(!empty($_POST)){
 
 	
 
-	if(strlen($post['firstname']) < 2 || strlen($post['libelle']) > 50){
+	if(strlen($post['firstname']) < 2 || strlen($post['firstname']) > 50){
 		$errors[] = 'Le Prénom doit comporter entre 5 et 50 caractères';
 	}
 
-    if(strlen($post['lastname']) < 2 || strlen($post['libelle']) > 50){
+    if(strlen($post['lastname']) < 2 || strlen($post['lastname']) > 50){
 		$errors[] = 'Le Nom doit comporter entre 5 et 50 caractères';
 	}
 
