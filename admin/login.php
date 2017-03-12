@@ -33,11 +33,12 @@ $err = array();
 			if(!empty($user)){
                 if(password_verify($post['passwd'], $user['password'])){
 					$_SESSION = array(
+                        'userId'=> $user['userId'],
 				        'nom' 	=> $user['lastname'],
 						'prenom'=> $user['firstname'],
 						'email' => $user['email'],
 					);
-                header('Location: deconnexion.php'); // On redirige vers la page de deconnexion
+                header('Location: user/add_recipe.php'); // On redirige vers la page de deconnexion
 			    die();
 				}		
             else { $errorLogin = true;}
