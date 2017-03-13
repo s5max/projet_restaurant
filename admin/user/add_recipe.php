@@ -17,7 +17,6 @@ session_start();
 
 require_once '../../inc/connect.php';
 
-date_default_timezone_set('America/Martinique');
 
 //Pour ajouter une recette l'utilisateur devra avoir été préalablement authentifié
 
@@ -47,7 +46,7 @@ $maxSize = (1024 * 1000) * 2;
 
 // Répertoire d'upload - ou seront téléchargés les photos
 
-$uploadDir = '../../uploads/';
+$uploadDir = 'uploads/';
 
 //Type d'images acceptées en téléchargement
 $mimeTypeAvailable = ['image/jpg', 'image/jpeg', 'image/pjpeg', 'image/png', 'image/gif'];
@@ -136,14 +135,14 @@ if(!empty($_POST)){
 
 		
 		//préparation de l'affichage de la date et de l'heure
-		$dateAndTime = date('Y/m/d H:i:s');
+		$dateAndTime = date('Y/m/d h:i:s');
 		
 		
 //pour réccupérer l'id de l'user -- penser à décommenter
 		$addRecipe->bindValue(':dataUserId', $_SESSION['userId'] , PDO::PARAM_INT); 
 		$addRecipe->bindValue(':dataTitle', $post['title']); 
 		$addRecipe->bindValue(':dataContent', $post['content']);
-		$addRecipe->bindValue(':dataPicture', $newPictureName);
+		$addRecipe->bindValue(':dataPicture', $uploadDir.$newPictureName);
 		$addRecipe->bindValue(':datadatehr', $dateAndTime);
 
 		if($addRecipe->execute()){
