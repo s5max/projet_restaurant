@@ -9,7 +9,7 @@ session_start(); // Permet de démarrer la session
 require_once '../../inc/connect.php';
 
 $errors = [];
-$post = []; // Contiendra les données épurées <3 <3
+$post = []; // Contiendra les données épurées
 $title = 'Liste des recettes';
 $displayformlist=true;
 $displayformsearch=true;
