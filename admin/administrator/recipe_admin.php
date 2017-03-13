@@ -2,11 +2,9 @@
 
 	//inclure le header
 
-	//SELECT * recipes	ORDER BY DESC
-	//fetchAll
+	//Gérer les recettes
 
-session_start(); // Permet de démarrer la session
-require_once '../../inc/connect.php';
+	//inclure le footer
 
 $errors = [];
 $post = []; // Contiendra les données épurées
@@ -208,4 +206,5 @@ require_once '../../inc/header.php';
     
 <?php
 require_once '../../inc/footer.php';
+
 ?>
